@@ -241,10 +241,10 @@ local function patchCoverBrowser(plugin)
         original_update(self, ...)
         if self._foldercover_processed or self.menu.no_refresh_covers or not self.do_cover_image then return end
         if self.entry.is_file or self.entry.file or not self.mandatory then return end
-        
+
         local dir_path = self.entry and self.entry.path
         if not dir_path then return end
-        
+
         self._foldercover_processed = true
 
         local cover_file = findCover(dir_path)
